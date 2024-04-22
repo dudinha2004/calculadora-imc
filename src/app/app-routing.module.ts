@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'aluno',
+    loadChildren: () => import('./aluno/aluno.module').then( m => m.AlunoPageModule)
+  },
+  {
+    path: 'calculadora-imc',
+    loadChildren: () => import('./calculadora-imc/calculadora-imc.module').then( m => m.CalculadoraImcPageModule)
+  },
 ];
 
 @NgModule({
